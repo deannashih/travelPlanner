@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+
+  <script src="module.js"></script>
+  <script src="controllers.js"></script>
+  <script src="services.js"></script>
+</head>
+
+<body ng-app='travelApp' ng-controller='mainCtrl'>
+
+  <!-- <div class="container" id="header">
+    <div class="row">
+      <div class="col s12">
+        <h1>Hey</h1>
+      </div>
+    </div> -->
+
+      </div>
+      <div class="navbar-fixed">
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"><i class="material-icons" id="logo">room</i> wanderlust</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <input type="text" placeholder="image url" ng-model='newDestination.image'>
+          </li>
+          <li>
+            <input type="text" placeholder="destination" ng-model='newDestination.destination'>
+          </li>
+          <li>
+            <input type="text" placeholder="goal" ng-model='newDestination.goal'>
+          </li>
+          <li>
+            <input type="text" placeholder="complete by" ng-model='newDestination.completeBy'>
+          </li>
+
+          <li>
+            <input type="text" placeholder="notes" ng-model='newDestination.notes'>
+
+          </li>
+          <li>
+            <i class="material-icons" id="add" ng-click='addDestination(destination)'>playlist_add</i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="container" id="cardContainer">
+  <div class="row">
+    <div class="col s12 m4" ng-repeat='destination in destinations track by $index'>
+
+
+      <div class="card">
+
+
+            <div class="removeDest">
+              <i class="material-icons right" ng-click='removeDestination(destination)'>close</i>
+            </div>
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" ng-src="{{destination.image}}">
+        </div>
+
+        <div class="card-content">
+          <span class="card-title activator text-darken-4"><i class="material-icons right" id="moreInfo" ng-click='prePopDestination(destination)'>more_vert</i></span>
+
+          <div class="card-title activator text-darken-4"><i class="material-icons">room</i></div>
+          <span class="card-title activator text-darken-4" id="destination">{{destination.destination}}</span>
+          <br>
+
+        </div>
+        <div class="card-reveal">
+          <span class="card-title text-darken-4"><i class="material-icons right">close</i></span>
+
+          <i class="material-icons">info_outline</i>
+
+          <p ng-show='editDestination.goal'>goal</p>
+          <span class="card-title activator text-darken-4">{{destination.goal}}</span>
+          <br>
+          <p ng-show='editDestination.completeBy'>complete by</p>
+          <span class="card-title activator text-darken-4">{{destination.completeBy}}</span>
+          <br>
+          <p ng-show='editDestination.notes'>notes</p>
+          <p class="notes">{{destination.notes}}</p>
+
+          <br>
+          <h5>Edit</h5>
+          <input type="text" placeholder="destination" ng-model='editDestination.destination'>
+          <input type="text" placeholder="goal" ng-model='editDestination.goal'>
+          <input type="text" placeholder="complete by" ng-model='editDestination.completeBy'>
+          <input type="text" placeholder="notes" ng-model='editDestination.notes'>
+
+
+            <div class="card-title text-darken-4">
+              <button class="btn" ng-click='updateDestination(editDestination)'>save</button>
+            </div>
+          <!-- <textarea rows="20" placeholder="save more information here" ng-model='editDestination.moreInfo'></textarea>
+          <button class="btn" ng-click='saveDetails(editDestination)'>Save Details</button>
+          <span class="card-title activator grey-text text-darken-4">More Info</span> -->
+<!--
+          <p>{{destination.moreInfo}}</p> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

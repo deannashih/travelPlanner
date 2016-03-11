@@ -1,0 +1,118 @@
+body {
+  background-color: #283754;
+  color: #ccc;
+}
+#header {
+  width: 100%;
+  z-index: 101;
+  top: 0;
+  left: 0;
+}
+h5 {
+  color:#fb8254;
+}
+nav {
+  background-color: #FB8254;
+  height: 70px;
+  z-index:150;
+  width:100%;
+}
+nav .nav-wrapper {
+  padding: 0 25px;
+  margin: 0 auto;
+}
+nav ul li {
+  margin: auto 5px;
+}
+.row{
+  height:280px;
+}
+.brand-logo{
+  font-weight:200;
+}
+#logo{
+  display:inline;
+  color:#fff;
+}
+#add {
+    cursor:pointer;
+    color:#fff;
+}
+#add:hover {
+  color:#283754;
+}
+.sticky {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 3px 4px #777;
+}
+.material-icons{
+  color:#FB8254;
+}
+#cardContainer{
+  margin-top:100px;
+}
+input[type=text]:focus:not([readonly]){
+  border-bottom:1px solid #fff;
+}
+.card{
+  background-color: #405F87;
+}
+.card-title{
+  color:#405F87;
+}
+#destination{
+  color:#fff;
+}
+.card .card-content .card-title {
+  line-height:22px;
+  font-size:20px;
+}
+.card-reveal .card-title{
+  line-height:20px;
+  font-size:18px;
+}
+.card-reveal input {
+  color:#283754;
+}
+.removeDest {
+  position:relative;
+
+}
+.removeDest i {
+  position:absolute;
+  z-index:102;
+  color:#283754;
+  text-align: center;
+  cursor: pointer;
+  top:10px;
+  right:5px;
+}
+.card .card-reveal{
+  z-index:103;
+}
+
+.btn {
+  background-color: #FB8254;
+  text-align:center;
+}
+
+#save {
+  color:#283754;
+}
+.btn #save {
+  text-align:center;
+}
+.btn:hover {
+  background-color: #283754;
+}
+p {
+  margin:0 auto;
+}
+.notes {
+  font-size:14px;
+  color:#405F87;
+}
